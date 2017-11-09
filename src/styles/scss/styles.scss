@@ -5,9 +5,11 @@
  *
  */
 //Custom
+@import "_custom/_variables.scss";
+@import "_custom/basic";
 @import "_custom/searchengine";
 
 //Bootstrap
-@import "bootstrap_imports";
 @import "overridden_bt_variables";
+@import "bootstrap_imports";
 

@@ -11,6 +11,7 @@ class App extends Component {
         };
 
         this.fetchMoviesList = debounce(500, this.fetchMoviesList);
+        this.fetchMovie = this.fetchMovie.bind(this);
     }
 
     // componentWillMount() {
@@ -19,9 +20,15 @@ class App extends Component {
     //         .then(json => this.setState({data: json}));
     // }
 
+    fetchMovie(id) {
+        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=cda6dc540fff812dc71561b7f17d7a65&query=&language=en-US`)
+            .then(response => response.json)
+            .then(json => console.log(json))
+    }
+
     fetchMoviesList(keyWord) {
         if (keyWord) {
-            fetch("http://api.themoviedb.org/3/search/movie?api_key=cda6dc540fff812dc71561b7f17d7a65&query=" + keyWord)
+            fetch(`http://api.themoviedb.org/3/search/movie?api_key=cda6dc540fff812dc71561b7f17d7a65&query=${keyWord}`)
                 .then(response => response.json())
                 .then(json => {
                     json.results = json.results
@@ -56,9 +63,12 @@ class App extends Component {
                                        onChange={this.handleChange.bind(this)}
                                        id="keyWord"/>
                                 <div className="searchengine-autocomplete">
-                                    {this.state.data.results ? this.state.data.results.map((movie, index) =>
-                                        <div
-                                            className="searchengine-autocomplete-option">{movie.original_title}</div>) : ""}
+                                    {this.state.data.results ? this.state.data.results.splice(0,10).map((movie, index) =>
+                                        <div key={`autocomplete-option-${index}`}
+                                             className="searchengine-autocomplete-option"
+                                             onClick={() => console.log(movie)}>
+                                            <h5>{movie.original_title}</h5>
+                                        </div>) : ""}
                                 </div>
                             </div>
                         </div>
@@ -66,6 +76,7 @@ class App extends Component {
 
                     <div className="row">
                         <div className="col">
+                            <h1>Test</h1>
                             {/*<table>*/}
                             {/*<tbody>*/}
                             {/*{this.state.data.results ? this.state.data.results.map((movie, index) => <tr*/}
