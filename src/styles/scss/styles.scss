@@ -1,0 +1,13 @@
+/*
+ *
+ * STYLES SCSS
+ * Aggregator of bootstrap and custom styles. Base to generate builded css and css map.
+ *
+ */
+//Custom
+@import "_custom/searchengine";
+
+//Bootstrap
+@import "bootstrap_imports";
+@import "overridden_bt_variables";
+

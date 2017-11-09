@@ -1,0 +1,16 @@
+/*
+ *
+ * Search Engine Styles
+ *
+ */
+
+.searchengine {
+  &-input {
+    position: relative;
+  }
+
+  & .searchengine-autocomplete {
+    position: absolute
+  }
+
+}
