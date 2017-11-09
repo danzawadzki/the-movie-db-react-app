@@ -1,0 +1,15 @@
+/*
+ *
+ * Fundamental Styles
+ *
+ */
+
+#root {
+  background-size: contain;
+
+  background: url("https://image.tmdb.org/t/p/original//5kYj5EOQMFBFCdnk4X8KaFUfDVR.jpg") top center;
+};
+
+.App {
+  background-image: $background-gradient;
+};

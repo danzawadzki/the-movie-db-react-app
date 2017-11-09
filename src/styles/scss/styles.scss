@@ -4,12 +4,16 @@
  * Aggregator of bootstrap and custom styles. Base to generate builded css and css map.
  *
  */
-//Custom
-@import "_custom/_variables.scss";
-@import "_custom/basic";
-@import "_custom/searchengine";
-
 //Bootstrap
 @import "overridden_bt_variables";
 @import "bootstrap_imports";
+
+//Custom
+@import "_custom/variables.scss";
+@import "_custom/helpers";
+@import "_custom/fundamental";
+@import "_custom/header";
+@import "_custom/_moviedescription";
+@import "_custom/footer";
+@import "_custom/searchengine";
 
