@@ -12,7 +12,7 @@ const footer = props => {
                         </p>
                         <p className="footer-smaller">
                             <small>
-                                I thank TMDb for giving me access to their API.
+                                Big thanks to the TMDb for giving me access to their API.
                             </small>
                         </p>
 

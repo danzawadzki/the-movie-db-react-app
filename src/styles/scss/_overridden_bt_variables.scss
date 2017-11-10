@@ -69,7 +69,7 @@
 //  "gray-dark":  $gray-800
 //), $colors);
 //
-$primary:       #21D07A !default;
+$primary: #21D07A !default;
 //$secondary:     $gray-600 !default;
 //$success:       $green !default;
 //$info:          $cyan !default;
@@ -137,8 +137,8 @@ $primary:       #21D07A !default;
 ////
 //// Settings for the `<body>` element.
 //
-$body-bg:                   white !default;
-$body-color:                white !default;
+$body-bg: white !default;
+$body-color: white !default;
 //
 //// Links
 ////
@@ -147,7 +147,7 @@ $body-color:                white !default;
 //$link-color:                theme-color("primary") !default;
 //$link-decoration:           none !default;
 //$link-hover-color:          darken($link-color, 15%) !default;
-$link-hover-decoration:     none !default;
+$link-hover-decoration: none !default;
 //
 //// Paragraphs
 ////
@@ -204,7 +204,7 @@ $link-hover-decoration:     none !default;
 //$border-width:                1px !default;
 //$border-color:                $gray-200 !default;
 //
-//$border-radius:               .25rem !default;
+$border-radius: 1.5rem !default;
 //$border-radius-lg:            .3rem !default;
 //$border-radius-sm:            .2rem !default;
 //
@@ -223,20 +223,20 @@ $link-hover-decoration:     none !default;
 //// Font, line-height, and color for body text, headings, and more.
 //
 //// stylelint-disable value-keyword-case
-$font-family-sans-serif:      "Source Sans Pro", !default;
-$font-family-monospace:       "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+$font-family-sans-serif: "Source Sans Pro", !default;
+$font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
 //// stylelint-enable value-keyword-case
 //
 //$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 //$font-size-lg:                ($font-size-base * 1.25) !default;
 //$font-size-sm:                ($font-size-base * .875) !default;
 //
-$font-weight-light:           300 !default;
+$font-weight-light: 300 !default;
 //$font-weight-normal:          400 !default;
 //$font-weight-bold:            700 !default;
 //
-$font-weight-base:            $font-weight-light !default;
+$font-weight-base: $font-weight-light !default;
 //$line-height-base:            1.5 !default;
 //
 //$h1-font-size:                $font-size-base * 2.5 !default;
@@ -250,7 +250,7 @@ $font-weight-base:            $font-weight-light !default;
 //$headings-font-family:        inherit !default;
 //$headings-font-weight:        500 !default;
 //$headings-line-height:        1.2 !default;
-$headings-color:              white !default;
+$headings-color: white !default;
 //
 //$display1-size:               6rem !default;
 //$display2-size:               5.5rem !default;
@@ -356,7 +356,7 @@ $headings-color:              white !default;
 //
 //$input-color:                           $gray-700 !default;
 //$input-border-color:                    $gray-400 !default;
-//$input-btn-border-width:                $border-width !default; // For form controls and buttons
+$input-btn-border-width: 0 !default; // For form controls and buttons
 //$input-box-shadow:                      inset 0 1px 1px rgba($black,.075) !default;
 //
 //$input-border-radius:                   $border-radius !default;

@@ -1,4 +1,5 @@
 import React from "react";
+import SearchEngine from "./SearchEngine";
 
 const header = props => {
     return (
@@ -12,16 +13,9 @@ const header = props => {
                     </div>
 
                     <div className="col-xs-12 col-md-8">
-                        <div className="input-group">
-                                    <span className="searchengine-icon">
-                                        <i className="fa fa-search btn" aria-hidden="true"/>
-                                    </span>
-                            <input type="text"
-                                   onChange={props.onChange}
-                                   className="form-control"
-                                   placeholder="Search for..."
-                                   aria-label="Search for..."/>
-                        </div>
+                        <SearchEngine
+                            autocompleteSuggestions={props.autocompleteSuggestions}
+                            handleChange={props.handleChange}/>
                     </div>
 
                 </div>

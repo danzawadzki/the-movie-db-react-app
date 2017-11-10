@@ -1,16 +1,30 @@
+@import "../_overridden_bt_variables";
+
 .moviedescription {
 
   &-cover {
     z-index: 1000;
+    min-width: 300px;
+    min-height: 450px;
+    background-color: gray;
+    border-radius: .5rem;
+    transition: ease-in-out 500ms;
+    box-shadow: 0 30px 40px 5px rgba(0, 0, 0, .4);
+    &:hover {
+      box-shadow: 0 10px 20px 5px rgba(0, 0, 0, .3);
+      transform: scale(.98);
+    }
 
     &-image {
-      box-shadow: 0 30px 40px 5px rgba(0, 0, 0, .4);
-      transition: ease-in-out 500ms;
+      width: 300px;
+      height: 450px;
+      background-color: gray;
+      border-radius: .5rem;
 
-      &:hover {
-        box-shadow: 0 10px 20px 5px rgba(0, 0, 0, .3);
-        transform: scale(.98);
-      }
     }
+  }
+
+  &-info {
+    color: $primary;
   }
 }

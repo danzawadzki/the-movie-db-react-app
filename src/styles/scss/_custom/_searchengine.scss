@@ -6,9 +6,12 @@
 
 .searchengine {
   z-index: 2000;
+  transition: all 200ms ease-in-out;
 
   &-input {
     position: relative;
+    border-radius: 1.5rem !important;
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, .3);
   }
 
   &-icon {
@@ -23,17 +26,55 @@
   }
 
   &-autocomplete {
+    width: 100%;
+    margin-top: 2.4rem;
+    z-index: 4000;
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, .3);
+    transition: all 200ms ease-in-out;
+
+    &:first-child {
+      border-radius: 1rem;
+    }
 
     &-option {
-      background-color: rgba(0,0,0,.2);
-      border-bottom: 1px solid black;
+      transition: all 200ms ease-in-out;
+      background-color: white;
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
       padding: 1rem;
       z-index: 4000;
+
+      &:hover {
+        background-color: $primary;
+        color: white;
+
+        & .searchengine-autocomplete-option-desc-title {
+          color: white;
+        }
+
+      }
+
+      &:first-child {
+        border-radius: .75rem .75rem 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 .75rem .75rem;
+      }
 
       &-cover {
         width: 20px;
         height: 30px;
-        background-color: rgba(255, 255, 255, .4);
+        background-color: rgba(0, 0, 0, .2);
+      }
+
+      &-desc {
+
+        &-title {
+          font-weight: 500;
+          padding-left: 1rem;
+          color: $dark;
+
+        }
       }
     }
   }
