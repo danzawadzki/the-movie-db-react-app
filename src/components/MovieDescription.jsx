@@ -62,11 +62,14 @@ const MovieDescription = props => {
                     <div className="offset-md-1 col-xs-12 col-md-6">
                         <MovieDescriptionInformations
                             title={props.movieDetails.title}
+                            genres={props.movieDetails.genres}
+                            status={props.movieDetails.status}
                             runtime={props.movieDetails.runtime}
                             revenue={props.movieDetails.revenue}
                             budget={props.movieDetails.budget}
                             overview={props.movieDetails.overview}
                             releaseDate={props.movieDetails.release_date}
+                            production_companies={props.movieDetails.production_companies}
                             autocompleteSuggestions={props.autocompleteSuggestions}/>
                     </div>
                 </div>
