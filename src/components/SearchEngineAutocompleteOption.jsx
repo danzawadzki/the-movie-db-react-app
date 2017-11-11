@@ -2,9 +2,9 @@ import React from "react";
 
 const SearchEngineAutocompleteOption = props => {
     return (
-        <div key={`autocomplete-option-${props.index}`}
+        <div key={props.index}
              className="searchengine-autocomplete-option d-flex"
-             onClick={() => console.log(props.movie)}>
+             onClick={() => props.handleMovieChange(props.movie.id)}>
 
             {/* Cover */}
             <div className="searchengine-autocomplete-option-cover">

@@ -2,7 +2,6 @@ import React from "react";
 import SearchEngineAutocomplete from "./SearchEngineAutocomplete";
 
 const SearchEngine = props => {
-    console.log(props.autocompleteSuggestions)
     return (
         <div className="input-group">
                                     <span className="searchengine-icon">
@@ -14,6 +13,7 @@ const SearchEngine = props => {
                    placeholder="Search for..."
                    aria-label="Search for..."/>
             {props.autocompleteSuggestions ? <SearchEngineAutocomplete
+                handleMovieChange={props.handleMovieChange}
                 autocompleteSuggestions={props.autocompleteSuggestions}/> : ""}
         </div>
     )

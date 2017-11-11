@@ -15,6 +15,7 @@ const header = props => {
                     <div className="col-xs-12 col-md-8">
                         <SearchEngine
                             autocompleteSuggestions={props.autocompleteSuggestions}
+                            handleMovieChange={props.handleMovieChange}
                             handleChange={props.handleChange}/>
                     </div>
 
