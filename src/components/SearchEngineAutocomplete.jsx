@@ -10,6 +10,7 @@ const SearchEngineAutocomplete = props => {
                     .splice(0, 10)
                     .map((movie, index) =>
                         <SearchEngineAutocompleteOption
+                            handleChange={props.handleChange}
                             handleMovieChange={props.handleMovieChange}
                             movie={movie}
                             index={index}/>) : ""}

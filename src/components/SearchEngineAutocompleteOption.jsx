@@ -4,7 +4,14 @@ const SearchEngineAutocompleteOption = props => {
     return (
         <div key={props.index}
              className="searchengine-autocomplete-option d-flex"
-             onClick={() => props.handleMovieChange(props.movie.id)}>
+             onClick={() => {
+                 props.handleMovieChange(props.movie.id);
+                 document.querySelector(".searchengine-input").value = props.movie.title;
+                 const root = document.querySelector("#root");
+                 root.style.background = `url("https://image.tmdb.org/t/p/original${props.movie.backdrop_path}") top center`;
+                 root.style.backgroundSize = "contain";
+                 props.handleChange({target: {id: "autocompleteSuggestions", value: []}})
+             }}>
 
             {/* Cover */}
             <div className="searchengine-autocomplete-option-cover">

@@ -13,6 +13,7 @@ const SearchEngine = props => {
                    placeholder="Search for..."
                    aria-label="Search for..."/>
             {props.autocompleteSuggestions ? <SearchEngineAutocomplete
+                handleChange={props.handleChange}
                 handleMovieChange={props.handleMovieChange}
                 autocompleteSuggestions={props.autocompleteSuggestions}/> : ""}
         </div>
