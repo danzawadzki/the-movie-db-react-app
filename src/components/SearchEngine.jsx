@@ -1,6 +1,13 @@
 import React from "react";
 import SearchEngineAutocomplete from "./SearchEngineAutocomplete";
 
+/*
+ *
+ * Search Engine Component
+ * Input containing one child component: Autocomplete.
+ *
+ */
+
 const SearchEngine = props => {
     return (
         <div className="input-group">

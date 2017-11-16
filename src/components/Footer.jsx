@@ -1,5 +1,11 @@
 import React from "react"
 
+/*
+ *
+ * Footer Component
+ *
+ */
+
 const footer = props => {
     return (
         <footer>

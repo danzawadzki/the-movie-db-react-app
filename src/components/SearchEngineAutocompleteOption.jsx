@@ -1,5 +1,11 @@
 import React from "react";
 
+/*
+ *
+ * Search Engine Autocomplete Option Component
+ *
+ */
+
 const SearchEngineAutocompleteOption = props => {
     return (
         <div key={props.index}
@@ -9,7 +15,7 @@ const SearchEngineAutocompleteOption = props => {
                  document.querySelector(".searchengine-input").value = props.movie.title;
                  const root = document.querySelector("#root");
                  root.style.background = `url("https://image.tmdb.org/t/p/original${props.movie.backdrop_path}") top center`;
-                 root.style.backgroundSize = "contain";
+                 root.style.backgroundSize = "cover";
                  props.handleChange({target: {id: "autocompleteSuggestions", value: []}})
              }}>
 

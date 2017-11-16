@@ -1,6 +1,12 @@
 import React from "react";
 
-const MovieDescriptionInformations = props => {
+/*
+ *
+ * Movie Description Information Component
+ *
+ */
+
+const MovieDescriptionInformation = props => {
     return (
         <div>
             <h1 className="mb-0">{props.title}</h1>
@@ -51,4 +57,4 @@ const MovieDescriptionInformations = props => {
     )
 }
 
-export default MovieDescriptionInformations;
+export default MovieDescriptionInformation;

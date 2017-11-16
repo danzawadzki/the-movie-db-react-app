@@ -6,6 +6,12 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MovieDescription from "./components/MovieDescription";
 
+/*
+ *
+ * The Movie Db - React App
+ *
+ */
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -65,14 +71,14 @@ class App extends Component {
         this.fetchMovie = this.fetchMovie.bind(this);
     }
 
-    //Method to fetch movie information
+    // Fetcher for the movie information
     fetchMovie(id) {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${Config.apiKey}&language=en-US`)
             .then(response => response.json())
             .then(json => this.setState({movieDetails: json}))
     }
 
-    //Method to fetch movies list
+    // Fetcher for the movies list
     fetchMoviesList(keyWord) {
         keyWord.length > 0 ? (
             fetch(`http://api.themoviedb.org/3/search/movie?api_key=${Config.apiKey}&query=${keyWord}`)
@@ -86,6 +92,7 @@ class App extends Component {
         ) : this.setState({autocompleteSuggestions: Object.assign({})});
     }
 
+    // Handler for a input change event
     handleChange(e) {
         this.setState({
             [e.target.id]: e.target.value
@@ -93,32 +100,6 @@ class App extends Component {
 
         this.fetchMoviesList(e.target.value);
     };
-
-    // adult: false
-    // backdrop_path: "/xu9zaAevzQ5nnrsXN6JcahLnG4i.jpg"
-    // belongs_to_collection: null
-    // budget: 165000000
-    // genres: [{id: 12, name: "Adventure"}, {id: 18, name: "Drama"}, {id: 878, name: "Science Fiction"}]
-    // homepage: "http://www.interstellarmovie.net/"
-    // id: 157336
-    // imdb_id: "tt0816692"
-    // original_language: "en"
-    // original_title: "Interstellar"
-    // overview: "Interstellar chronicles the adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage."
-    // popularity: 29.628957
-    // poster_path: "/nBNZadXqJSdt05SHLqgT0HuC5Gm.jpg"
-    // production_companies: [{name: "Paramount Pictures", id: 4}, {name: "Legendary Pictures", id: 923},…]
-    // production_countries: [{iso_3166_1: "CA", name: "Canada"}, {iso_3166_1: "US", name: "United States of America"},…]
-    // release_date: "2014-11-05"
-    // revenue: 675120017
-    // runtime: 169
-    // spoken_languages: [{iso_639_1: "en", name: "English"}]
-    // status: "Released"
-    // tagline: "Mankind was born on Earth. It was never meant to die here."
-    // title: "Interstellar"
-    // video: false
-    // vote_average: 8.1
-    // vote_count: 11616
 
     render() {
         return (
