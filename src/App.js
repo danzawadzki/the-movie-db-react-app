@@ -81,7 +81,7 @@ class App extends Component {
     // Fetcher for the movies list
     fetchMoviesList(keyWord) {
         keyWord.length > 0 ? (
-            fetch(`http://api.themoviedb.org/3/search/movie?api_key=${Config.apiKey}&query=${keyWord}`)
+            fetch(`https://api.themoviedb.org/3/search/movie?api_key=${Config.apiKey}&query=${keyWord}`)
                 .then(response => response.json())
                 .then(json => {
                     json.results = json.results
