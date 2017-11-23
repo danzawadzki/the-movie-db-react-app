@@ -11,10 +11,19 @@ body {
 
 #root {
   background-size: cover;
-  background: url("https://image.tmdb.org/t/p/original//5kYj5EOQMFBFCdnk4X8KaFUfDVR.jpg") top center;
+  //: $background-gradient;
 }
 
 .App {
   min-height: 100vh;
-  background-image: $background-gradient;
+  position: relative;
+}
+
+.App:after {
+  z-index: 4000;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
 }
