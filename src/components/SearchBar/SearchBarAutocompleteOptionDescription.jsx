@@ -8,7 +8,7 @@ import React from "react";
  * @returns {ReactElement || XML}
  */
 
-const SearchBarAutocompleteOptionDescription = props => {
+const SearchBarAutocompleteOptionDescription = (props) => {
     return (
         <div className="searchengine-autocomplete-option-desc">
             <h6 className="searchengine-autocomplete-option-desc-title">

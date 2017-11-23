@@ -7,7 +7,7 @@ import React from "react";
  * @returns {ReactElement || XML}
  */
 
-const SearchBarInput = props => {
+const SearchBarInput = (props) => {
     return (
         <input type="text"
                id="searchKeyWord"

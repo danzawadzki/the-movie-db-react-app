@@ -8,7 +8,7 @@ import React from "react";
  * @returns {ReactElement || XML}
  */
 
-const MovieDescriptionCover = props => {
+const MovieDescriptionCover = (props) => {
     return (
         <div className="col-12 col-md-6 col-lg-4">
             <div className="moviedescription-cover mb-4 mx-auto">

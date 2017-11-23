@@ -11,7 +11,7 @@ import SearchBarAutocompleteOption from "./SearchBarAutocompleteOption";
  * @returns {ReactElement || XML}
  */
 
-const SearchBarAutocomplete = props => {
+const SearchBarAutocomplete = (props) => {
     return (
         <div className="searchengine-autocomplete">
             {props.suggestionsList.results ?

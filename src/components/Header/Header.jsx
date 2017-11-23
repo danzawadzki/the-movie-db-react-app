@@ -9,7 +9,7 @@ import SearchBarContainer from "../../containers/SearchBarContainer";
  * @returns {ReactElement || XML}
  */
 
-const Header = props => {
+const Header = (props) => {
     return (
         <header className="header">
             <div className="container">

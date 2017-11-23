@@ -10,7 +10,7 @@ import SearchBarAutocompleteOptionDescription from "./SearchBarAutocompleteOptio
  * @returns {ReactElement || XML}
  */
 
-const SearchBarAutocompleteOption = props => {
+const SearchBarAutocompleteOption = (props) => {
 
     //Destructuring props object
     const {id, title, poster_path, release_date} = props.movie;

@@ -7,7 +7,7 @@ import React from "react";
  * @returns {ReactElement || XML}
  */
 
-const SearchBarAutocompleteOptionCover = props => {
+const SearchBarAutocompleteOptionCover = (props) => {
     return (
         <div className="searchengine-autocomplete-option-cover">
             <img src={`https://image.tmdb.org/t/p/w92_and_h138_bestv2${props.posterPath}`} width={20}/>

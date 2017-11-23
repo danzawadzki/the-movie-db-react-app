@@ -10,7 +10,7 @@ import MovieDescriptionInformation from "../components/Movie/MovieDescriptionInf
  * @returns {ReactElement || XML}
  */
 
-const MovieDescriptionContainer = props => {
+const MovieDescriptionContainer = (props) => {
 
     // Destructuring props object
     const {

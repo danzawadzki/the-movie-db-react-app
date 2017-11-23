@@ -16,7 +16,7 @@ import React from "react";
  * @returns {ReactElement || XML}
  */
 
-const MovieDescriptionInformation = props => {
+const MovieDescriptionInformation = (props) => {
     return (
         <div className="offset-lg-1 col-12 col-md-6">
             <h1 className="mb-0">{props.title}</h1>
@@ -52,7 +52,7 @@ const MovieDescriptionInformation = props => {
                             .join(", ")}
                     </p>
 
-                    <strong>Burget:</strong>
+                    <strong>Budget:</strong>
                     <p className="moviedescription-info">
                         {props.budget > 0 ? props.budget.toLocaleString() : "Unknown"}
                     </p>
