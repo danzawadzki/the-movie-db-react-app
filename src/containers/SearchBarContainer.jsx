@@ -1,10 +1,11 @@
+import PropTypes from "prop-types";
 import React, {Component} from "react";
 import {debounce} from "throttle-debounce"
-import {handleChange} from "../modules/handlers";
-import {fetchMoviesList} from "../modules/fetchers";
 import SearchBarAutocomplete from "../components/SearchBar/SearchBarAutocomplete";
 import SearchBarIcon from "../components/SearchBar/SearchBarIcon";
 import SearchBarInput from "../components/SearchBar/SearchBarInput";
+import {fetchMoviesList} from "../modules/fetchers";
+import {handleChange} from "../modules/handlers";
 
 /**
  * The container for search bar components and function to fetch movie suggestions.
@@ -66,5 +67,10 @@ class SearchBarContainer extends Component {
         )
     }
 }
+
+/** Prop Types */
+SearchBarContainer.propTypes = {
+    setMovieDescription: PropTypes.func.isRequired
+};
 
 export default SearchBarContainer;

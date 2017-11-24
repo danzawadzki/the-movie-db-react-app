@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 
 /**
@@ -10,9 +11,14 @@ import React from "react";
 const SearchBarAutocompleteOptionCover = (props) => {
     return (
         <div className="searchengine-autocomplete-option-cover">
-            <img src={`https://image.tmdb.org/t/p/w92_and_h138_bestv2${props.posterPath}`} width={20}/>
+            <img src={`https://image.tmdb.org/t/p/w92_and_h138_bestv2${props.posterPath}`} alt="Movie Poster" width={20}/>
         </div>
     )
+};
+
+/** PropTypes */
+SearchBarAutocompleteOptionCover.propTypes = {
+    posterPath: PropTypes.string.isRequired
 };
 
 export default SearchBarAutocompleteOptionCover;

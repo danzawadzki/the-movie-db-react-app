@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 
 /**
@@ -19,6 +20,11 @@ const MovieDescriptionCover = (props) => {
             </div>
         </div>
     )
+};
+
+/** PropTypes */
+MovieDescriptionCover.propTypes = {
+    posterPath: PropTypes.string.isRequired
 };
 
 export default MovieDescriptionCover;

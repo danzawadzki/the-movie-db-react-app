@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import MovieDescription from "../containers/MovieDescriptionContainer";
 import Footer from "./Footer/Footer";
@@ -22,6 +23,11 @@ const AppView = (props) => {
             <Footer/>
         </div>
     )
+};
+
+/** PropTypes */
+AppView.propTypes = {
+    appStyle: PropTypes.string
 };
 
 export default AppView;

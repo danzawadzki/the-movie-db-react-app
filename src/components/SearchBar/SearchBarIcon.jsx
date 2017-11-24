@@ -13,4 +13,7 @@ const SearchBarIcon = () => {
     )
 };
 
+/** PropTypes */
+SearchBarIcon.propTypes = {};
+
 export default SearchBarIcon;

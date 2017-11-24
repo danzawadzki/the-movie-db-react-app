@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 
 /**
@@ -65,6 +66,19 @@ const MovieDescriptionInformation = (props) => {
             </div>
         </div>
     )
+};
+
+/** PropTypes */
+MovieDescriptionInformation.propTypes = {
+    title: PropTypes.string.isRequired,
+    genres: PropTypes.string.isRequired,
+    overview: PropTypes.string.isRequired,
+    releaseDate: PropTypes.string.isRequired,
+    productionCompanies: PropTypes.array.isRequired,
+    runtime: PropTypes.string,
+    status: PropTypes.string,
+    budget: PropTypes.string,
+    revenue: PropTypes.string
 };
 
 export default MovieDescriptionInformation;

@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import React from "react";
-import HeaderLogo from "./HeaderLogo";
 import SearchBarContainer from "../../containers/SearchBarContainer";
+import HeaderLogo from "./HeaderLogo";
 
 /**
  * Header component
@@ -26,6 +27,11 @@ const Header = (props) => {
             </div>
         </header>
     )
+};
+
+/** PropTypes */
+Header.propTypes = {
+    setMovieDescription: PropTypes.func.isRequired
 };
 
 export default Header;
