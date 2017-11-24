@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
+import AppView from "./components/AppView";
 import {fetchMovie} from "./modules/fetchers";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import MovieDescription from "./containers/MovieDescriptionContainer";
 import './styles/styles.css';
 
 /**
@@ -61,12 +59,9 @@ class App extends Component {
         };
 
         return (
-            <div className="App" style={appStyle}>
-                <Header setMovieDescription={this.setMovieDescription}/>
-                {Object.keys(this.state.movieDescription).length !== 0 &&
-                <MovieDescription movieDescription={this.state.movieDescription}/>}
-                <Footer/>
-            </div>
+            <AppView appStyle={appStyle}
+                     setMovieDescription={this.setMovieDescription}
+                     movieDescription={this.state.movieDescription}/>
         )
     }
 }
