@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import SearchBarAutocompleteOption from "./SearchBarAutocompleteOption";
 
@@ -25,6 +26,13 @@ const SearchBarAutocomplete = (props) => {
                             key={index}/>) : ""}
         </div>
     )
+};
+
+/** PropTypes */
+SearchBarAutocomplete.propTypes = {
+    suggestionsList: PropTypes.object.isRequired,
+    setMovieDescription: PropTypes.func.isRequired,
+    handleChange: PropTypes.func.isRequired
 };
 
 export default SearchBarAutocomplete;

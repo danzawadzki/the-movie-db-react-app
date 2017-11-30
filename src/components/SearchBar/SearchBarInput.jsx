@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import "./SearchBar.css";
 
@@ -18,6 +19,11 @@ const SearchBarInput = (props) => {
                placeholder="Search for..."
                aria-label="Search for..."/>
     )
+};
+
+/** PropTypes */
+SearchBarInput.propTypes = {
+    handleChange: PropTypes.func.isRequired
 };
 
 export default SearchBarInput;

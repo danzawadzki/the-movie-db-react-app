@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/Movie/MovieDescriptionInformation.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/Movie/MovieDescriptionInformation.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from "react";
+
+/**
+ * Information about the movie (presentational component).
+ *
+ * @params {Object} props
+ * @prop {String} title - The movie title.
+ * @prop {String} genres - The movie genres.
+ * @prop {String} overview - The movie overview.
+ * @prop {String} releaseDate - The movie release date.
+ * @prop {Array&lt;Object>} productionCompanies - Array contains objects representing production companies.
+ * @prop {Number} runtime - The movie runtime.
+ * @prop {String} status - The movie status.
+ * @prop {Number} budget - The movie budget.
+ * @prop {Number} revenue - The movie revenue.
+ * @returns {ReactElement || XML}
+ */
+
+const MovieDescriptionInformation = (props) => {
+    return (
+        &lt;div className="offset-lg-1 col-12 col-md-6">
+            &lt;h1 className="mb-0">{props.title}&lt;/h1>
+            &lt;p className="mb-3">
+                {props.genres
+                    .map(genre => genre.name)
+                    .join(", ")}
+            &lt;/p>
+            &lt;strong>Description:&lt;/strong>
+            &lt;p>{props.overview}&lt;/p>
+            &lt;div className="row pt-3">
+                &lt;div className="col-5">
+                    &lt;strong>Release Date:&lt;/strong>
+                    &lt;p className="moviedescription-info">
+                        {props.releaseDate}
+                    &lt;/p>
+
+                    &lt;strong>Status:&lt;/strong>
+                    &lt;p className="moviedescription-info">
+                        {props.status}
+                    &lt;/p>
+
+                    &lt;strong>Runtime:&lt;/strong>
+                    &lt;p className="moviedescription-info">
+                        {props.runtime} mins
+                    &lt;/p>
+                &lt;/div>
+                &lt;div className="col-7">
+                    &lt;strong>Production:&lt;/strong>
+                    &lt;p className="moviedescription-info">
+                        {props.productionCompanies
+                            .map(company => company.name)
+                            .join(", ")}
+                    &lt;/p>
+
+                    &lt;strong>Budget:&lt;/strong>
+                    &lt;p className="moviedescription-info">
+                        {props.budget > 0 ? props.budget.toLocaleString() : "Unknown"}
+                    &lt;/p>
+
+                    &lt;strong>Revenue:&lt;/strong>
+                    &lt;p className="moviedescription-info">
+                        {props.revenue > 0 ? props.revenue.toLocaleString() : "Unknown"}
+                    &lt;/p>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    )
+};
+
+export default MovieDescriptionInformation;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-Config.html">Config</a></li><li><a href="module-Fetchers.html">Fetchers</a></li><li><a href="module-Handlers.html">Handlers</a></li></ul><h3>Classes</h3><ul><li><a href="App.html">App</a></li><li><a href="SearchBarContainer.html">SearchBarContainer</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AppView">AppView</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#FooterCopyrights">FooterCopyrights</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HeaderLogo">HeaderLogo</a></li><li><a href="global.html#MovieDescriptionContainer">MovieDescriptionContainer</a></li><li><a href="global.html#MovieDescriptionCover">MovieDescriptionCover</a></li><li><a href="global.html#MovieDescriptionInformation">MovieDescriptionInformation</a></li><li><a href="global.html#SearchBarAutocomplete">SearchBarAutocomplete</a></li><li><a href="global.html#SearchBarAutocompleteOption">SearchBarAutocompleteOption</a></li><li><a href="global.html#SearchBarAutocompleteOptionCover">SearchBarAutocompleteOptionCover</a></li><li><a href="global.html#SearchBarAutocompleteOptionDescription">SearchBarAutocompleteOptionDescription</a></li><li><a href="global.html#SearchBarIcon">SearchBarIcon</a></li><li><a href="global.html#SearchBarInput">SearchBarInput</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Nov 24 2017 13:49:14 GMT+0100 (CET)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

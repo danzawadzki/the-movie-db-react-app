@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 
 /**
@@ -23,6 +24,12 @@ const SearchBarAutocompleteOptionDescription = (props) => {
             </h6>
         </div>
     )
+};
+
+/** PropTypes */
+SearchBarAutocompleteOptionDescription.propTypes = {
+    title: PropTypes.string.isRequired,
+    releaseYear: PropTypes.number.isRequired
 };
 
 export default SearchBarAutocompleteOptionDescription;

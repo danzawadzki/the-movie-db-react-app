@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import MovieDescriptionCover from "../components/MovieDescription/MovieDescriptionCover";
 import MovieDescriptionInformation from "../components/MovieDescription/MovieDescriptionInformation";
@@ -15,15 +16,19 @@ const MovieDescriptionContainer = (props) => {
     // Destructuring props object
     const {
         title, genres, status, runtime, revenue, budget,
-        overview, release_date, production_companies
+        overview, release_date, production_companies, poster_path
     } = props.movieDescription;
 
     return (
         <div className="container movieDescription">
             <div className="row">
                 <MovieDescriptionCover
+<<<<<<< HEAD
                     title={title}
                     posterPath={props.movieDescription.poster_path}/>
+=======
+                    posterPath={poster_path}/>
+>>>>>>> dbf878e911436874dea4a740ce7f04d4f71ac082
 
                 <MovieDescriptionInformation
                     title={title}
@@ -38,6 +43,11 @@ const MovieDescriptionContainer = (props) => {
             </div>
         </div>
     )
+};
+
+/** PropTypes */
+MovieDescriptionContainer.propTypes = {
+    movieDescription: PropTypes.object.isRequired
 };
 
 export default MovieDescriptionContainer;

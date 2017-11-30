@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import SearchBarAutocompleteOptionCover from "./SearchBarAutocompleteOptionCover";
 import SearchBarAutocompleteOptionDescription from "./SearchBarAutocompleteOptionDescription";
@@ -7,6 +8,8 @@ import SearchBarAutocompleteOptionDescription from "./SearchBarAutocompleteOptio
  *
  * @param {Object} props
  * @prop {Object} movie - Single child movie from the fetched list of TMDb suggestions.
+ * @prop {Function} setMovieDescription - Setter for the movie description in the parent component.
+ * @prop {Function} handleChange - Handler to change search bar input value.
  * @returns {ReactElement || XML}
  */
 
@@ -42,6 +45,13 @@ const SearchBarAutocompleteOption = (props) => {
                 releaseYear={release_date.split("-")[0]}/>
         </div>
     )
+};
+
+/** PropTypes */
+SearchBarAutocompleteOption.propTypes = {
+    movie: PropTypes.object.isRequired,
+    handleChange: PropTypes.func.isRequired,
+    setMovieDescription: PropTypes.func.isRequired
 };
 
 export default SearchBarAutocompleteOption;
