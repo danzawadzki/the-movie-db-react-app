@@ -1,0 +1,101 @@
+@import "../../styles/scss/overridden_bt_variables";
+
+/**
+ * Search Engine Styles
+ */
+
+//searchBar
+//  searchBar__input
+//  searchBar__icon
+//
+//  autocompleteList
+//    autocompleteListItem
+//    autocompleteListItem__cover
+//    autocompleteListItem__title
+
+.searchBar {
+  z-index: 2000;
+  transition: all 200ms ease-in-out;
+
+  &__input {
+    position: relative;
+    border-radius: 1.5rem !important;
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, .3);
+  }
+
+  &__icon {
+    color: black;
+    z-index: 500;
+
+    &--pullRight {
+      right: 0;
+      position: absolute;
+    }
+  }
+}
+
+.autocompleteList {
+  position: absolute;
+  width: 100%;
+  margin-top: 2.4rem;
+  z-index: 4000;
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, .3);
+  transition: all 200ms ease-in-out;
+
+  &:first-child {
+    border-radius: 1rem;
+  }
+
+  & .autocompleteListItem {
+    transition: all 200ms ease-in-out;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 1rem;
+    z-index: 4000;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: $primary;
+      border-color: $primary;
+      cursor: pointer;
+
+      .autocompleteListItem__title {
+        color: white !important;
+
+        &--textGreen {
+          color: white;
+        }
+      }
+    }
+
+    &:first-child {
+      border-radius: .75rem .75rem 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 .75rem .75rem;
+    }
+
+    &__cover {
+      width: 20px;
+      height: 30px;
+      background-color: rgba(0, 0, 0, .2);
+      margin-right: 0.375rem;
+    }
+
+    &__title {
+      font-weight: 500;
+      color: black;
+
+      &--noMargins {
+        margin: 0;
+        padding: 0;
+      }
+
+      &--textGreen {
+        color: $primary;
+      }
+    }
+  }
+}

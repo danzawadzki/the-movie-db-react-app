@@ -1,9 +1,9 @@
 import React from "react";
-import MovieDescriptionCover from "../components/Movie/MovieDescriptionCover";
-import MovieDescriptionInformation from "../components/Movie/MovieDescriptionInformation";
+import MovieDescriptionCover from "../components/MovieDescription/MovieDescriptionCover";
+import MovieDescriptionInformation from "../components/MovieDescription/MovieDescriptionInformation";
 
 /**
- * Movie Description component - Contains two child components: Cover and Information.
+ * MovieDescription Description component - Contains two child components: Cover and Information.
  *
  * @param {Object} props
  * @prop {Object} movieDescription - The movie description from TMDb API response.
@@ -19,9 +19,10 @@ const MovieDescriptionContainer = (props) => {
     } = props.movieDescription;
 
     return (
-        <div className="container">
+        <div className="container movieDescription">
             <div className="row">
                 <MovieDescriptionCover
+                    title={title}
                     posterPath={props.movieDescription.poster_path}/>
 
                 <MovieDescriptionInformation

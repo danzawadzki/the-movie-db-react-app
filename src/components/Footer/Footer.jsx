@@ -1,4 +1,5 @@
 import React from "react"
+import "./Footer.css";
 import FooterCopyrights from "./FooterCopyrights";
 
 /**
@@ -8,7 +9,7 @@ import FooterCopyrights from "./FooterCopyrights";
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className="footer">
             <div className="container">
                 <div className="row pt-5 pb-5">
                     <div className="col text-center">

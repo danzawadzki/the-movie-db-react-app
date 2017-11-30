@@ -23,7 +23,7 @@ export function fetchMoviesList(keyWord, callback) {
 
 /**
  * Fetch details about single movie from TMDb.
- * @param {Number} id - Movie id from TMDb database
+ * @param {Number} id - MovieDescription id from TMDb database
  * @param {Function} callback - Callback function.
  */
 export function fetchMovie(id, callback) {

@@ -1,0 +1,39 @@
+@import "../../styles/scss/overridden_bt_variables";
+
+/**
+ * MovieDescription Description styles
+ */
+
+.movieDescription {
+
+  & .movieCoverContainer {
+    display: flex;
+    justify-content: center;
+
+    &__cover {
+      z-index: 1000;
+      width: 300px;
+      height: 450px;
+      background-color: gray;
+      border-radius: .5rem;
+      transition: ease-in-out 500ms;
+      box-shadow: 0 30px 40px 5px rgba(0, 0, 0, .4);
+
+      &:hover {
+        box-shadow: 0 10px 20px 5px rgba(0, 0, 0, .3);
+        transform: scale(.98);
+      }
+
+      &--fixedSize {
+        width: 300px;
+        height: 450px;
+        background-color: gray;
+        border-radius: .5rem;
+      }
+    }
+  }
+
+  &__information {
+    color: $primary;
+  }
+}

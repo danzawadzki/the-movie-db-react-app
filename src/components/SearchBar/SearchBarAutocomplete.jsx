@@ -13,7 +13,7 @@ import SearchBarAutocompleteOption from "./SearchBarAutocompleteOption";
 
 const SearchBarAutocomplete = (props) => {
     return (
-        <div className="searchengine-autocomplete">
+        <div className="autocompleteList">
             {props.suggestionsList.results ?
                 props.suggestionsList.results
                     .splice(0, 10)

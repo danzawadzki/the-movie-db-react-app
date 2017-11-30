@@ -1,20 +1,9 @@
-/*
- *
- * STYLES SCSS
- * Aggregator of bootstrap and custom styles. A base to generate production built css and css map.
- *
+/**
+ * Import of Bootstrap styles and overridden variables.
  */
-//Bootstrap
+
 @import "overridden_bt_variables";
-//Overridden variables (modified)
 @import "bootstrap_imports";
-// Source files (not modified)
-//Custom
-@import "_custom/variables.scss";
-@import "_custom/helpers";
-@import "_custom/fundamental";
-@import "_custom/header";
-@import "_custom/_moviedescription";
-@import "_custom/footer";
-@import "_custom/searchengine";
+
+
 

@@ -1,0 +1,24 @@
+/**
+ * Footer Styles
+ */
+
+.footer {
+
+  &__copyrights {
+
+    &--marginBottom {
+      margin-bottom: .125rem;
+    }
+
+  }
+
+  &__subCopyrights {
+    font-weight: 300 !important;
+    font-size: .75rem;
+
+    &--lighter {
+      color: rgba(255, 255, 255, .5);
+    }
+
+  }
+}

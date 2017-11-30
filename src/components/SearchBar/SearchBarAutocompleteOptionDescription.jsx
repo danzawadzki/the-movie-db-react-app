@@ -9,10 +9,17 @@ import React from "react";
  */
 
 const SearchBarAutocompleteOptionDescription = (props) => {
+
+    //Destructuring props
+    const {title, releaseYear} = props;
+
     return (
-        <div className="searchengine-autocomplete-option-desc">
-            <h6 className="searchengine-autocomplete-option-desc-title">
-                {props.title} ({props.releaseYear})
+        <div>
+            <h6 className="autocompleteListItem__title autocompleteListItem__title--noMargins">
+                {title}&nbsp;
+                <span className="autocompleteListItem__title--textGreen">
+                    ({releaseYear})
+                </span>
             </h6>
         </div>
     )

@@ -8,14 +8,14 @@ import React from "react";
 const FooterCopyrights = () => {
     return (
         <div>
-            <p className="mb-0">
+
+            <p className="footer__copyrights footer__copyrights--marginBottom">
                 Made with <i className="fa fa-heart" aria-hidden="true"/> by
                 <a href="https://github.com/danzawadzki"> Daniel Zawadzki</a>
             </p>
-            <p className="footer-smaller">
-                <small>
-                    Big thanks to the TMDb for giving me access to their API.
-                </small>
+
+            <p className="footer__subCopyrights footer__subCopyrights--lighter">
+                Big thanks to the TMDb for giving me access to their API.
             </p>
         </div>
     )

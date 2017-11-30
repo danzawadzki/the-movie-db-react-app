@@ -8,9 +8,13 @@ import React from "react";
  */
 
 const SearchBarAutocompleteOptionCover = (props) => {
+
+    //Destructuring props
+    const {posterPath} = props;
+
     return (
-        <div className="searchengine-autocomplete-option-cover">
-            <img src={`https://image.tmdb.org/t/p/w92_and_h138_bestv2${props.posterPath}`} width={20}/>
+        <div className="autocompleteListItem__cover">
+            <img src={`https://image.tmdb.org/t/p/w92_and_h138_bestv2${posterPath}`} width={20}/>
         </div>
     )
 };

@@ -1,9 +1,11 @@
 import React from "react";
+import "./Header.css";
 import HeaderLogo from "./HeaderLogo";
 import SearchBarContainer from "../../containers/SearchBarContainer";
 
 /**
  * Header component
+ *
  * @param {Object} props
  * @prop {Function} setMovieDescription - Setter for the movie description in the parent component.
  * @returns {ReactElement || XML}

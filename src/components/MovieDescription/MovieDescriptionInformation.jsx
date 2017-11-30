@@ -17,49 +17,53 @@ import React from "react";
  */
 
 const MovieDescriptionInformation = (props) => {
+
+    const {title, genres, overview, releaseDate, productionCompanies,
+    runtime, status, budget, revenue} = props;
+
     return (
-        <div className="offset-lg-1 col-12 col-md-6">
-            <h1 className="mb-0">{props.title}</h1>
+        <div className="col-12 col-md-6">
+            <h1 className="mb-0">{title}</h1>
             <p className="mb-3">
-                {props.genres
+                {genres
                     .map(genre => genre.name)
                     .join(", ")}
             </p>
             <strong>Description:</strong>
-            <p>{props.overview}</p>
+            <p>{overview}</p>
             <div className="row pt-3">
                 <div className="col-5">
                     <strong>Release Date:</strong>
-                    <p className="moviedescription-info">
-                        {props.releaseDate}
+                    <p className="movieDescription__information">
+                        {releaseDate}
                     </p>
 
                     <strong>Status:</strong>
-                    <p className="moviedescription-info">
-                        {props.status}
+                    <p className="movieDescription__information">
+                        {status}
                     </p>
 
                     <strong>Runtime:</strong>
-                    <p className="moviedescription-info">
-                        {props.runtime} mins
+                    <p className="movieDescription__information">
+                        {runtime} mins
                     </p>
                 </div>
                 <div className="col-7">
                     <strong>Production:</strong>
-                    <p className="moviedescription-info">
-                        {props.productionCompanies
+                    <p className="movieDescription__information">
+                        {productionCompanies
                             .map(company => company.name)
                             .join(", ")}
                     </p>
 
                     <strong>Budget:</strong>
-                    <p className="moviedescription-info">
-                        {props.budget > 0 ? props.budget.toLocaleString() : "Unknown"}
+                    <p className="movieDescription__information">
+                        {budget > 0 ? budget.toLocaleString() : "Unknown"}
                     </p>
 
                     <strong>Revenue:</strong>
-                    <p className="moviedescription-info">
-                        {props.revenue > 0 ? props.revenue.toLocaleString() : "Unknown"}
+                    <p className="movieDescription__information">
+                        {revenue > 0 ? revenue.toLocaleString() : "Unknown"}
                     </p>
                 </div>
             </div>

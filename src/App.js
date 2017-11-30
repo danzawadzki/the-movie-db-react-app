@@ -1,12 +1,13 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
+import "./styles/styles.css";
+import "./App.css"
 import {fetchMovie} from "./modules/fetchers";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import MovieDescription from "./containers/MovieDescriptionContainer";
-import './styles/styles.css';
 
 /**
- * The Movie Db - React App
+ * The MovieDescription Db - React App
  * Container component
  *
  * @author Daniel Zawadzki <hello@danielzawadzki.com>
@@ -39,7 +40,7 @@ class App extends Component {
 
     /**
      * Setter for movie details.
-     * @param {Number} id - Movie id from TMDb database.
+     * @param {Number} id - MovieDescription id from TMDb database.
      */
     setMovieDescription(id) {
         fetchMovie(id, response =>

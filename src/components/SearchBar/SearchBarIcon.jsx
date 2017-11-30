@@ -1,4 +1,5 @@
 import React from "react";
+import "./SearchBar.css";
 
 /**
  * Icon for the search bar presentational component.
@@ -7,7 +8,7 @@ import React from "react";
 
 const SearchBarIcon = () => {
     return (
-        <span className="searchengine-icon">
+        <span className="searchBar__icon searchBar__icon--pullRight">
             <i className="fa fa-search btn" aria-hidden="true"/>
         </span>
     )

@@ -1,4 +1,5 @@
 import React from "react";
+import "./SearchBar.css";
 
 /**
  * Input for the search bar presentational component.
@@ -13,7 +14,7 @@ const SearchBarInput = (props) => {
                id="searchKeyWord"
                value={props.searchKeyWord}
                onChange={props.handleChange}
-               className="form-control searchengine-input"
+               className="searchBar__input form-control"
                placeholder="Search for..."
                aria-label="Search for..."/>
     )

@@ -31,7 +31,7 @@ const SearchBarAutocompleteOption = (props) => {
 
     return (
         <div
-            className="searchengine-autocomplete-option d-flex"
+            className="autocompleteListItem"
             onClick={handleMovieSelect}>
 
             <SearchBarAutocompleteOptionCover
