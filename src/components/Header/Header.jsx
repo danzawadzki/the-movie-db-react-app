@@ -1,10 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-<<<<<<< HEAD
 import "./Header.css";
-import HeaderLogo from "./HeaderLogo";
-=======
->>>>>>> dbf878e911436874dea4a740ce7f04d4f71ac082
 import SearchBarContainer from "../../containers/SearchBarContainer";
 import HeaderLogo from "./HeaderLogo";
 

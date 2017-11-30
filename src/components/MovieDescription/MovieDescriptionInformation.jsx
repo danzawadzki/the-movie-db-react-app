@@ -19,8 +19,10 @@ import React from "react";
 
 const MovieDescriptionInformation = (props) => {
 
-    const {title, genres, overview, releaseDate, productionCompanies,
-    runtime, status, budget, revenue} = props;
+    const {
+        title, genres, overview, releaseDate, productionCompanies,
+        runtime, status, budget, revenue
+    } = props;
 
     return (
         <div className="col-12 col-md-6">

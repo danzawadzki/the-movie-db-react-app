@@ -1,17 +1,7 @@
-<<<<<<< HEAD
 import React, {Component} from "react";
 import "./styles/styles.css";
-import "./App.css"
 import {fetchMovie} from "./modules/fetchers";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import MovieDescription from "./containers/MovieDescriptionContainer";
-=======
-import React, {Component} from 'react';
-import AppView from "./components/AppView";
-import {fetchMovie} from "./modules/fetchers";
-import './styles/styles.css';
->>>>>>> dbf878e911436874dea4a740ce7f04d4f71ac082
+import AppView from "./components/App/AppView";
 
 /**
  * The MovieDescription Db - React App

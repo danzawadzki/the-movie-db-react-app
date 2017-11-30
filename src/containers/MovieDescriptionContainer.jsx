@@ -23,12 +23,8 @@ const MovieDescriptionContainer = (props) => {
         <div className="container movieDescription">
             <div className="row">
                 <MovieDescriptionCover
-<<<<<<< HEAD
                     title={title}
                     posterPath={props.movieDescription.poster_path}/>
-=======
-                    posterPath={poster_path}/>
->>>>>>> dbf878e911436874dea4a740ce7f04d4f71ac082
 
                 <MovieDescriptionInformation
                     title={title}

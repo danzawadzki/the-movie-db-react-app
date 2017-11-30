@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import React from "react";
-import MovieDescription from "../containers/MovieDescriptionContainer";
-import Footer from "./Footer/Footer";
-import Header from "./Header/Header";
+import MovieDescription from "../../containers/MovieDescriptionContainer";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
+import "./App.css";
 
 /**
  * The main App presentational component. Gather header, movie description and footer components in one place.

@@ -4,15 +4,15 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "node-sass-chokidar": "0.0.3",
-=======
     "prop-types": "^15.6.0",
->>>>>>> dbf878e911436874dea4a740ce7f04d4f71ac082
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-scripts": "1.0.17",
     "throttle-debounce": "^1.0.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
