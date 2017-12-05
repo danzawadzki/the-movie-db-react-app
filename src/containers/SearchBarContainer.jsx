@@ -29,7 +29,7 @@ class SearchBarContainer extends Component {
             suggestionsList: {}
         };
 
-        this.fetchMoviesList = debounce(500, fetchMoviesList);
+        this.setMovieSuggestionsList = debounce(500, this.setMovieSuggestionsList).bind(this);
         this.handleChange = handleChange.bind(this);
     }
 
@@ -38,11 +38,33 @@ class SearchBarContainer extends Component {
         if (nextState.searchKeyWord.length > 0 &&
             nextState.searchKeyWord !== this.state.searchKeyWord) {
 
-            //Fetch and setState
-            this.fetchMoviesList(nextState.searchKeyWord,
-                response => this.setState({
+            this.setMovieSuggestionsList(nextState.searchKeyWord, response => {
+                this.setState({
                     suggestionsList: response
-                }));
+                })
+            });
+        }
+    }
+
+    /**
+     * Setter for the movie suggestions list.
+     * @param {String} id - The key word to generate suggested movies list.
+     * @param {Function} callback - The callback fun to call with response.
+     * TODO: Try to bind this with out passing callback func
+     */
+    async setMovieSuggestionsList(searchKeyWord, callback) {
+        let data = await fetchMoviesList(searchKeyWord);
+
+        //Sorting results
+        data.results = data.results
+            .sort((a, b) =>
+                (a.vote_count > b.vote_count) ? -1 : 1);
+
+        //Try/Catch block
+        try {
+            callback(data);
+        } catch (error) {
+            console.log(error);
         }
     }
 

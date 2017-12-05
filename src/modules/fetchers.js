@@ -8,26 +8,17 @@ import {ApiConfig} from "./config"
 /**
  * Fetch list of matching movie propositions.
  * @param {String} keyWord - Title of the searched movie
- * @param {Function} callback - Callback function.
  */
-export function fetchMoviesList(keyWord, callback) {
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${ApiConfig.key}&query=${keyWord}`)
+export function fetchMoviesList(keyWord) {
+    return fetch(`${ApiConfig.BASE_URL}/search/movie?api_key=${ApiConfig.KEY}&query=${keyWord}`)
         .then(response => response.json())
-        .then(json => {
-            json.results = json.results
-                .sort((a, b) =>
-                    (a.vote_count > b.vote_count) ? -1 : 1);
-            callback(json);
-        })
 }
 
 /**
  * Fetch details about single movie from TMDb.
  * @param {Number} id - MovieDescription id from TMDb database
- * @param {Function} callback - Callback function.
  */
-export function fetchMovie(id, callback) {
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${ApiConfig.key}&language=en-US`)
+export function fetchMovie(id) {
+    return fetch(`${ApiConfig.BASE_URL}/movie/${id}?api_key=${ApiConfig.KEY}&language=en-US`)
         .then(response => response.json())
-        .then(json => callback(json))
 }

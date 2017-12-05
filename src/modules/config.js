@@ -8,5 +8,6 @@
  * @prop {String} key - TMDb api key.
  */
 export const ApiConfig = {
-    key: "cda6dc540fff812dc71561b7f17d7a65&query="
+    KEY: "cda6dc540fff812dc71561b7f17d7a65&query=",
+    BASE_URL: "https://api.themoviedb.org/3"
 };

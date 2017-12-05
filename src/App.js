@@ -39,11 +39,14 @@ class App extends Component {
      * Setter for movie details.
      * @param {Number} id - MovieDescription id from TMDb database.
      */
-    setMovieDescription(id) {
-        fetchMovie(id, response =>
+    async setMovieDescription(id) {
+        try {
             this.setState({
-                movieDescription: response
-            }))
+                movieDescription: await fetchMovie(id)
+            })
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     /**
